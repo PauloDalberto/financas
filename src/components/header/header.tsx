@@ -1,6 +1,7 @@
-import './header.css';
 import { Link } from 'react-router-dom';
-import { BellIcon, UserCircleIcon } from '@heroicons/react/24/outline'
+import RouterComponent from '../../routes/Routes';
+import './header.css';
+import { BellIcon, UserCircleIcon } from '@heroicons/react/24/outline';
 
 export default function Header(){
   return(
@@ -9,9 +10,9 @@ export default function Header(){
         <img src="/nextcash.svg" alt="icone do site" className='logo' />
 
         <ul className='container-nav'>
-          <Link to={'/home'}><li>Home</li></Link>
-          <Link to={'/dashboard'}><li>Dashboard</li></Link>
-          <Link to={'/sobre'}><li>Sobre</li></Link>  
+          <li><Link to='/'>Home</Link></li>
+          <li><Link to='/dashboard'>Dashboard</Link></li>
+          <li><Link to='/about'>Sobre</Link></li>
         </ul>
       </nav>
 
