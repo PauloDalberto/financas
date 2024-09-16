@@ -1,15 +1,14 @@
 .about-container{
-
-}
-
-.about-infos{
   display: grid;
   grid-template-columns: 1fr 2fr;
   align-items: center;
   max-width: 1300px;
   margin: 0 auto;
   margin-top: 32px;
+  padding-inline: 16px;
 }
+
+
 
 .foto-perfil{
   max-width: 100%;
@@ -32,8 +31,13 @@
   font-size: 1.25rem;
 }
 
-.section{
+.about-infos{
   background-color: var(--c2);
-  width: 100vw;
-  
+  height: 100%;
+}
+
+.about-content{
+  max-width: 1300px;
+  margin: 0 auto;
+  padding-inline: 16px;
 }
