@@ -1,33 +1,34 @@
-import { createContext, useState } from 'react';
+import { useState } from 'react';
 import './login.css'
-
-export const Context = createContext({});
+import { useUser } from '../../contexts/UserContext';
 
 export default function Login(){
-  const [login, setLogin] = useState('')
+  const [loginInput, setLoginInput] = useState('');
+  const { login } = useUser();
 
-  const signUp = (event: any) => {
-    event.preventDefault()
-    setLogin(event.target.login.value);
-  }
+   function handleLogin(event: any) {
+    event.preventDefault();
+    
+    setLoginInput(event.target.login.value)
+
+    login({ name: loginInput });
+
+    console.log(loginInput)
+  };
 
   return(
     <div className='login'>
       <h1 className='title'>Bem vindo de volta!</h1>
         <p className='subtitle'>Insira suas informações para prosseguir para o site!</p>
+        <form className='form' id='form' onSubmit={handleLogin}>
+          <label htmlFor="login">Login</label>
+          <input type="text" name="login" placeholder="Noobmaster69" onChange={(e) => setLoginInput(e.target.value)} required/>
+          
+          <label htmlFor="password">Senha</label>
+          <input type="password" name="password" placeholder="senha123" required/>
 
-        <Context.Provider value={[login]}>
-          <form className='form' id='form' onSubmit={signUp}>
-            <label htmlFor="login">Login</label>
-            <input type="text" name="login" placeholder="Noobmaster69" required/>
-            
-            <label htmlFor="password">Senha</label>
-            <input type="password" name="password" placeholder="senha123" required/>
-
-            <button type='submit' className='buttonLogin'>Entrar</button>
-          </form>
-        </Context.Provider>
-        
+          <button type='submit' className='buttonLogin' >Entrar</button>
+        </form>
     </div>
   )
 }

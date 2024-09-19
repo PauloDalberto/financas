@@ -7,12 +7,11 @@ export default function Header(){
     <header className='container'>
       <nav>
         <img src="/nextcash.png" alt="icone do site" className='logo' />
-
         <ul className='container-nav'>
+          <li><Link to='/login'>Login</Link></li>
           <li><Link to='/'>Home</Link></li>
           <li><Link to='/dashboard'>Dashboard</Link></li>
           <li><Link to='/about'>Sobre</Link></li>
-          <li><Link to='/login'>Login</Link></li>
         </ul>
       </nav>
 

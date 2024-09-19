@@ -7,10 +7,10 @@ import Login from "../pages/login/Login";
 export default function RouterComponent(){
   return(
     <Routes>
+      <Route path="/login" element={<Login />}/>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/dashboard" element={<Dashboard />} />
-      <Route path="/login" element={<Login />}/>
     </Routes>
   )
 }
