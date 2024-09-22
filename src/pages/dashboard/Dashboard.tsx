@@ -95,14 +95,16 @@ export default function Dashboard() {
           <Graphic />
         </div>
 
-        <div>
+        <div className="transactions">
           <h3>Lista de Transações</h3>
-          <ul>
+          <ul className="transactions-list">
             {data.map((item, index) => (
               <li key={index}>
-                <span>{item.description} - {item.value} - {item.typeSpent}</span>
-                <button onClick={() => handleEdit(index)}>Editar</button>
-                <button onClick={() => handleDelete(index)}>Excluir</button>
+                <span>{item.description}</span>
+                <span>{item.value}</span>
+                <span>{item.typeSpent}</span>
+                <button className="button" onClick={() => handleEdit(index)}>Editar</button>
+                <button className="button" onClick={() => handleDelete(index)}>Excluir</button>
               </li>
             ))}
           </ul>

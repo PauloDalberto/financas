@@ -1,6 +1,5 @@
 import { useValueData } from '../../contexts/ExpenseContext';
 import { calculateTotals } from '../../utils/calculateTotals';
-import { formatCurrency } from '../../utils/formatCurrenct';
 import './graphic.css';
 import {
   PieChart,
@@ -11,7 +10,7 @@ import {
 } from 'recharts';
 
 export default function Graphic(){
-  const { addData, data } = useValueData();
+  const { data } = useValueData();
 
   const { totalIncome, totalExpense ,formattedTotalIncome, formattedTotalExpense, formattedTotalValue } = calculateTotals(data);
 

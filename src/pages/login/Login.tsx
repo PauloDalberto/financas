@@ -25,7 +25,7 @@ export default function Login(){
           <input type="text" name="login" placeholder="Noobmaster69" onChange={(e) => setLoginInput(e.target.value)} required/>
           
           <label htmlFor="password">Senha</label>
-          <input type="password" name="password" placeholder="senha123" required/>
+          <input type="password" name="password" id='password' placeholder="senha123" required/>
 
           <button type='submit' className='button' >Entrar</button>
         </form>

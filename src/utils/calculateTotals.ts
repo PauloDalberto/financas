@@ -1,7 +1,6 @@
 import { ValueData } from "../contexts/ExpenseContext";
 import { formatCurrency } from "./formatCurrenct";
 
-
 export const calculateTotals = (data: ValueData[]) => {
   const totalIncome = data.filter(item => item.typeSpent === "Renda")
   .reduce((acc, item) => acc + Number(item.value), 0);
