@@ -80,7 +80,7 @@ export default function Dashboard() {
               value={formData.typeSpent}
               onChange={handleInputChange}
             >
-              <option value="">Selecione</option>
+              <option value="" disabled>Selecione</option>
               <option value="Renda">Renda</option>
               <option value="Despesa">Despesa</option>
             </select>

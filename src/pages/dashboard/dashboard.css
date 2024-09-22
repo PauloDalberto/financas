@@ -1,5 +1,6 @@
 .dashboard-container{
   padding-inline: 24px;
+  padding-bottom: 32px;
 }
 
 .introdution-text{
@@ -90,6 +91,10 @@
   font-size: 2rem;
 }
 
+.transactions span, button{
+  width: 120px;
+}
+
 .transactions-list li{
   display: flex;
   justify-content: space-around;
@@ -98,4 +103,5 @@
   align-items: center;
   padding: 8px;
   background-color: var(--c2);
+  gap: 108px;
 }

@@ -1,19 +1,19 @@
 import { useState } from 'react';
 import './login.css'
 import { useUser } from '../../contexts/UserContext';
+import { useNavigate } from 'react-router-dom';
 
 export default function Login(){
   const [loginInput, setLoginInput] = useState('');
   const { login } = useUser();
+  const navigate = useNavigate();
 
    function handleLogin(event: any) {
     event.preventDefault();
-    
-    setLoginInput(event.target.login.value)
-
+    setLoginInput(event.target.login.value);
     login({ name: loginInput });
 
-    console.log(loginInput)
+    navigate('/home');
   };
 
   return(
@@ -27,7 +27,7 @@ export default function Login(){
           <label htmlFor="password">Senha</label>
           <input type="password" name="password" id='password' placeholder="senha123" required/>
 
-          <button type='submit' className='button' >Entrar</button>
+          <button type='submit' className='button'>Entrar</button>
         </form>
     </div>
   )
