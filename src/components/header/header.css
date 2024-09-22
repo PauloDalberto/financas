@@ -58,17 +58,17 @@ nav{
   .profile{
     display: none;
   }
-  .container-nav li{
-    font-size: 1.25rem;
-  }
 }
 
-@media (max-width: 500px){
+@media (max-width: 600px){
   .logo{
     display: none;
   }
   nav{
     width: 100%;
     justify-content: center;
+  }
+  .container-nav a{
+    font-size: 1rem;
   }
 }

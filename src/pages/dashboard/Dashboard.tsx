@@ -103,8 +103,8 @@ export default function Dashboard() {
                 <span>{item.description}</span>
                 <span>{item.value}</span>
                 <span>{item.typeSpent}</span>
-                <button className="button" onClick={() => handleEdit(index)}>Editar</button>
-                <button className="button" onClick={() => handleDelete(index)}>Excluir</button>
+                <button className="button dashboard-button" onClick={() => handleEdit(index)}>Editar</button>
+                <button className="button dashboard-button" onClick={() => handleDelete(index)}>Excluir</button>
               </li>
             ))}
           </ul>

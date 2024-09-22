@@ -28,7 +28,7 @@ export default function Graphic(){
       <h3>Total Despesa: {formattedTotalExpense}</h3>
       <h3>Saldo: {formattedTotalValue}</h3>
 
-      <ResponsiveContainer width="100%" height={300}>
+      <ResponsiveContainer width="60%" height={300}>
         <PieChart>
           <Pie
             data={chartData}

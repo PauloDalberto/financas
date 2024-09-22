@@ -91,7 +91,7 @@
   font-size: 2rem;
 }
 
-.transactions span, button{
+.transactions span, .dashboard-button{
   width: 120px;
 }
 
@@ -104,4 +104,26 @@
   padding: 8px;
   background-color: var(--c2);
   gap: 108px;
+}
+
+
+@media (max-width: 750px){
+  .transactions span, .dashboard-button{
+    width: fit-content;
+  }
+  .dashboard-content{
+    grid-template-columns: 1fr ;
+  }
+  .transactions{
+    grid-column: 1;
+  }
+  .transactions li{
+    gap: 12px;
+  }
+}
+
+@media (max-width: 400px){
+  .transactions li{
+    flex-wrap: wrap;
+  }
 }
