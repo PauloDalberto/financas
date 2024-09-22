@@ -1,11 +1,26 @@
 .home-container{
   padding-inline: 24px;
-}
-
-.introdution-text{
-
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .introdution-text p{
   color: var(--c8);
+}
+
+.description{
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.description-list {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.description-list li{
+  font-size: 1.25rem;
 }

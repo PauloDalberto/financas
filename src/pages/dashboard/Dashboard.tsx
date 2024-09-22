@@ -105,7 +105,7 @@ export default function Dashboard() {
             {data.map((item, index) => (
               <li key={index}>
                 <span>{item.description}</span>
-                <span>{formatCurrency(Number(item.value))}</span>
+                <span>{formatCurrency(item.value)}</span>
                 <span>{item.typeSpent}</span>
                 <button className="button dashboard-button" onClick={() => handleEdit(index)}>Editar</button>
                 <button className="button dashboard-button" onClick={() => handleDelete(index)}>Excluir</button>
