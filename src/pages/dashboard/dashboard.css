@@ -107,7 +107,7 @@
 }
 
 
-@media (max-width: 750px){
+@media (max-width: 800px){
   .transactions span, .dashboard-button{
     width: fit-content;
   }

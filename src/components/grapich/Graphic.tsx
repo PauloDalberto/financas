@@ -1,5 +1,7 @@
 import { useValueData } from '../../contexts/ExpenseContext';
 import { calculateTotals } from '../../utils/calculateTotals';
+import Expense from '../expenses/Expense';
+import Income from '../income/Income';
 import './graphic.css';
 import {
   PieChart,
@@ -24,8 +26,8 @@ export default function Graphic(){
   return(
     <div className='graphic'>
       <h1>Grafico:</h1>
-      <h3>Total Renda: {formattedTotalIncome}</h3>
-      <h3>Total Despesa: {formattedTotalExpense}</h3>
+      <Income formattedTotalIncome={formattedTotalIncome} />
+      <Expense formattedTotalExpense={formattedTotalExpense} />
       <h3>Saldo: {formattedTotalValue}</h3>
 
       <ResponsiveContainer width="60%" height={300}>

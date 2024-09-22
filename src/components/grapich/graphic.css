@@ -4,3 +4,9 @@
   justify-content: center;
   flex-direction: column;
 }
+
+.oi{
+  display: flex;
+  align-items: center;
+  gap: 20px
+}

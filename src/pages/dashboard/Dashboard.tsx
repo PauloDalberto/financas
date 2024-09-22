@@ -3,9 +3,12 @@ import './dashboard.css';
 import { useValueData, ValueData } from "../../contexts/ExpenseContext";
 import { useState } from "react";
 import Graphic from "../../components/grapich/Graphic";
+import { formatCurrency } from "../../utils/formatCurrenct";
 
 export default function Dashboard() {
   const { addData, data, removeData, updateData } = useValueData(); 
+
+
   const [formData, setFormData] = useState<ValueData>({
     description: "",
     value: 0,
@@ -89,6 +92,7 @@ export default function Dashboard() {
               Enviar dados
             </button>
           </form>
+
         </div>
 
         <div>
@@ -101,7 +105,7 @@ export default function Dashboard() {
             {data.map((item, index) => (
               <li key={index}>
                 <span>{item.description}</span>
-                <span>{item.value}</span>
+                <span>{formatCurrency(Number(item.value))}</span>
                 <span>{item.typeSpent}</span>
                 <button className="button dashboard-button" onClick={() => handleEdit(index)}>Editar</button>
                 <button className="button dashboard-button" onClick={() => handleDelete(index)}>Excluir</button>
