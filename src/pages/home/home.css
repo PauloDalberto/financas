@@ -1,0 +1,11 @@
+.home-container{
+  padding-inline: 24px;
+}
+
+.introdution-text{
+
+}
+
+.introdution-text p{
+  color: var(--c8);
+}
