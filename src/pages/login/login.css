@@ -48,15 +48,3 @@
   font-size: 1.125rem;
   margin-block: 8px;
 }
-
-.form button{
-  border: none;
-  border-radius: 8px;
-  padding-block: 12px;
-  font-weight: bold;
-  font-size: .875rem;
-  color: var(--c1);
-  background-color: var(--a1);
-  cursor: pointer;
-  margin-top: 16px;
-}

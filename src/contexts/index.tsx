@@ -1,9 +1,12 @@
+import { ValueDataProvider } from "./ExpenseContext"
 import { UserProvider } from "./UserContext"
 
 export const AppProvider = ({ children }: { children: React.ReactNode }) => {
   return(
-    <UserProvider>
-      {children}
-    </UserProvider>
+    <ValueDataProvider>
+      <UserProvider>
+        {children}
+      </UserProvider>
+    </ValueDataProvider>
   )
 }

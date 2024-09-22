@@ -27,7 +27,7 @@ export default function Login(){
           <label htmlFor="password">Senha</label>
           <input type="password" name="password" placeholder="senha123" required/>
 
-          <button type='submit' className='buttonLogin' >Entrar</button>
+          <button type='submit' className='button' >Entrar</button>
         </form>
     </div>
   )
